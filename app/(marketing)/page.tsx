@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
+const MarketingPage = () => {
   return (
     <div>
       <Button>Notion Clone</Button>
     </div>
   );
 }
+
+export default MarketingPage;
