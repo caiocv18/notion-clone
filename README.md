@@ -39,3 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 1. Node: 20.17.0
 2. npm: 10.8.3
+3. Next: 14.2.11
