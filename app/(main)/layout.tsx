@@ -1,18 +1,19 @@
 "use client";
 
-import { Spinner } from "@/components/spinner";
-import { useConvexAuth } from "convex/react";
-import { redirect } from "next/navigation";
-import { Navigation } from "./_components/navigation";
+import {Spinner} from "@/components/spinner";
+import {useConvexAuth} from "convex/react";
+import {redirect} from "next/navigation";
+import {Navigation} from "./_components/navigation";
+import React from "react";
 
 const MainLayout = ({
-    children
-}:{
+                        children
+                    }: {
     children: React.ReactNode;
 }) => {
-    const { isAuthenticated, isLoading } = useConvexAuth();
+    const {isAuthenticated, isLoading} = useConvexAuth();
 
-    if(isLoading) {
+    if (isLoading) {
         return (
             <div className="h-full flex items-center justify-center">
                 <Spinner size="lg"/>
@@ -20,7 +21,7 @@ const MainLayout = ({
         );
     }
 
-    if(!isAuthenticated) {
+    if (!isAuthenticated) {
         return redirect('/');
     }
 
@@ -33,5 +34,5 @@ const MainLayout = ({
         </div>
     );
 }
- 
+
 export default MainLayout;
